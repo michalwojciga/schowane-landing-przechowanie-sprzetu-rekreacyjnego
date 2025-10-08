@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Kontrola klimatu</title>
+  <desc id="desc">Ikona przedstawiająca termometr oraz płatek śniegu.</desc>
+  <defs>
+    <linearGradient id="gradient-climate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.7" />
+    </linearGradient>
+  </defs>
+  <rect x="20" y="8" width="12" height="32" rx="6" fill="url(#gradient-climate)" />
+  <circle cx="26" cy="44" r="12" fill="#1c4ed8" opacity="0.2" />
+  <circle cx="26" cy="44" r="8" fill="#1c4ed8" />
+  <path
+    d="M44 18l4 4 4-4m-4 4v8m-6 2l-4 4 4 4m0-4h8m-6 10l-4 4 4 4m0-4h8"
+    fill="none"
+    stroke="#0f172a"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    opacity="0.7"
+  />
+</svg>

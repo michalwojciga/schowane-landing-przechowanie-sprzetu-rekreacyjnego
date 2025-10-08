@@ -10,3 +10,5 @@ def test_landing_route_returns_success(client):
     assert "Schowane.pl" in html
     assert "Jak to działa" in html
     assert "Zarezerwuj teraz" in html
+    assert "Zaufali nam właściciele sprzętu i operatorzy marin" in html
+    assert "Stała ochrona 24/7" in html

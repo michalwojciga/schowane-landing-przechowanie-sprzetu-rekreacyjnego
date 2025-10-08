@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Wsparcie serwisowe</title>
+  <desc id="desc">Ikona przedstawiająca klucz i zębatkę symbolizujące serwis.</desc>
+  <defs>
+    <linearGradient id="gradient-service" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22c55e" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#16a34a" stop-opacity="0.75" />
+    </linearGradient>
+  </defs>
+  <circle cx="38" cy="26" r="14" fill="#86efac" opacity="0.35" />
+  <path
+    d="M46 18l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z"
+    fill="#14532d"
+    opacity="0.6"
+  />
+  <path
+    d="M12 48l14.5-14.5a4.5 4.5 0 016.36 0l2.64 2.64a4.5 4.5 0 010 6.36L21 58"
+    fill="none"
+    stroke="url(#gradient-service)"
+    stroke-width="5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <circle cx="16" cy="52" r="6" fill="#15803d" opacity="0.6" />
+</svg>

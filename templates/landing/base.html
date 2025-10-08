@@ -70,8 +70,90 @@
           </figure>
         </div>
       </section>
+      <section class="landing-partners" aria-labelledby="partners-heading">
+        <div class="landing-section-inner">
+          <div class="landing-section-header">
+            <p class="landing-section-eyebrow">Z kim współpracujemy</p>
+            <h2 id="partners-heading">Zaufali nam właściciele sprzętu i operatorzy marin</h2>
+            <p class="landing-section-description">
+              Obsługujemy klientów indywidualnych i partnerów biznesowych, którzy potrzebują bezpiecznej przestrzeni dla swoich
+              łodzi, quadów oraz pojazdów sezonowych.
+            </p>
+          </div>
+          <ul class="landing-partner-logos" role="list">
+            <li class="landing-partner-logo" aria-label="Marina Solna">
+              <span aria-hidden="true">Marina<br />Solna</span>
+            </li>
+            <li class="landing-partner-logo" aria-label="MotoTech Garage">
+              <span aria-hidden="true">MotoTech</span>
+            </li>
+            <li class="landing-partner-logo" aria-label="Baltic Riders">
+              <span aria-hidden="true">Baltic<br />Riders</span>
+            </li>
+            <li class="landing-partner-logo" aria-label="Outdoor Polska">
+              <span aria-hidden="true">Outdoor<br />PL</span>
+            </li>
+            <li class="landing-partner-logo" aria-label="Vistula Yachts">
+              <span aria-hidden="true">Vistula<br />Yachts</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="benefits" class="landing-benefits" aria-labelledby="benefits-heading">
+        <div class="landing-section-inner">
+          <div class="landing-section-header">
+            <p class="landing-section-eyebrow">Korzyści</p>
+            <h2 id="benefits-heading">Dlaczego warto przechować sprzęt w Schowane.pl</h2>
+            <p class="landing-section-description">
+              Zapewniamy kompleksową obsługę od odbioru po serwis, dzięki czemu możesz skupić się na przyjemności korzystania ze
+              swojego sprzętu, a nie na logistyce.
+            </p>
+          </div>
+          <div class="landing-benefits-grid">
+            <article class="landing-benefit-card">
+              <img
+                class="landing-benefit-icon"
+                src="{{ url_for('static', filename='icons/landing/secure-storage.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3>Stała ochrona 24/7</h3>
+              <p>Monitoring, kontrola dostępu i ubezpieczenie sprzętu zapewniają spokojną głowę przez cały rok.</p>
+            </article>
+            <article class="landing-benefit-card">
+              <img
+                class="landing-benefit-icon"
+                src="{{ url_for('static', filename='icons/landing/climate-control.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3>Stabilne warunki przechowywania</h3>
+              <p>Dedykowane strefy z kontrolą temperatury i wilgotności chronią sprzęt przed korozją i uszkodzeniami.</p>
+            </article>
+            <article class="landing-benefit-card">
+              <img
+                class="landing-benefit-icon"
+                src="{{ url_for('static', filename='icons/landing/service-support.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3>Wsparcie serwisowe na miejscu</h3>
+              <p>Przeprowadzamy przeglądy, ładowanie akumulatorów i przygotowanie do sezonu bez dodatkowej logistyki.</p>
+            </article>
+            <article class="landing-benefit-card">
+              <img
+                class="landing-benefit-icon"
+                src="{{ url_for('static', filename='icons/landing/easy-access.svg') }}"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3>Szybki dostęp na życzenie</h3>
+              <p>Zgłaszasz wyjazd, a my szykujemy sprzęt do odbioru lub transportujemy go pod wskazany adres.</p>
+            </article>
+          </div>
+        </div>
+      </section>
       <div id="how-it-works" class="landing-anchor" aria-hidden="true"></div>
-      <div id="benefits" class="landing-anchor" aria-hidden="true"></div>
       <div id="pricing" class="landing-anchor" aria-hidden="true"></div>
       <div id="faq" class="landing-anchor" aria-hidden="true"></div>
       <div id="cta-final" class="landing-anchor" aria-hidden="true"></div>
