@@ -19,3 +19,6 @@ def test_landing_route_returns_success(client):
     assert "Opinie naszych klientów" in html
     assert "Najczęściej zadawane pytania" in html
     assert "Gotowy odzyskać przestrzeń i spokój?" in html
+    assert "Dołącz do newslettera" in html
+    assert "Polityka prywatności" in html
+    assert "Schowane.pl sp. z o.o." in html

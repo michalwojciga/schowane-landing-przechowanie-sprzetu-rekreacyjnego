@@ -46,12 +46,18 @@
 - [ ] Testy: sprawdzenie, że CTA końcowe istnieje w dokumencie.
 
 ### PR 6: Stopka, dostępność, finalne szlify
-- [ ] Stopka z logo, danymi kontaktowymi, linkami prawnymi, ikonami social media, formularzem newslettera.
-- [ ] Dodanie walidacji formularza newslettera prostym JS (sprawdzenie formatu e-mail, komunikat błędu).
-- [ ] Globalne poprawki responsywności (media queries dla tablet/mobile), spacing, typografia.
-- [ ] Audyt dostępności: kontrasty, aria-labels dla ikon, focus states.
-- [ ] Uzupełnienie dokumentacji w `docs/` (np. finalny opis sekcji, instrukcja generowania grafik).
-- [ ] Rozszerzenie testów e2e (np. Flask test sprawdzający obecność fragmentu stopki).
+- [x] Stopka z logo, danymi kontaktowymi, linkami prawnymi, ikonami social media, formularzem newslettera.
+- [x] Dodanie walidacji formularza newslettera prostym JS (sprawdzenie formatu e-mail, komunikat błędu).
+- [x] Globalne poprawki responsywności (media queries dla tablet/mobile), spacing, typografia.
+- [x] Audyt dostępności: kontrasty, aria-labels dla ikon, focus states.
+- [x] Uzupełnienie dokumentacji w `docs/` (np. finalny opis sekcji, instrukcja generowania grafik).
+- [x] Rozszerzenie testów e2e (np. Flask test sprawdzający obecność fragmentu stopki).
+
+#### Notatki wdrożeniowe PR 6
+- Stopka korzysta z gradientowego tła i siatki 4 kolumn, która skaluje się do układu jednokolumnowego na urządzeniach mobilnych.
+- Formularz newslettera waliduje adres e-mail po stronie klienta i prezentuje komunikaty stanu z wykorzystaniem `aria-live`.
+- Zaktualizowano globalne style `:focus-visible`, formularzy oraz media queries dla sekcji landing page, aby poprawić kontrast, spacing i dostępność na mniejszych ekranach.
+- Test integracyjny Flask weryfikuje obecność sekcji newslettera oraz elementów prawnych w stopce.
 
 ### PR 7: Kontent i optymalizacja (opcjonalny finał)
 - [ ] Aktualizacja treści copy na podstawie feedbacku (jeśli zajdzie potrzeba).
