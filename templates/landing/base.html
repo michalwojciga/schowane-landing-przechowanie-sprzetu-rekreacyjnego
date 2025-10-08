@@ -271,8 +271,91 @@
           </div>
         </div>
       </section>
-      <div id="faq" class="landing-anchor" aria-hidden="true"></div>
-      <div id="cta-final" class="landing-anchor" aria-hidden="true"></div>
+      <section id="testimonials" class="landing-testimonials" aria-labelledby="testimonials-heading">
+        <div class="landing-section-inner">
+          <div class="landing-section-header">
+            <p class="landing-section-eyebrow">Referencje</p>
+            <h2 id="testimonials-heading">Opinie naszych klientów</h2>
+            <p class="landing-section-description">
+              Właściciele łodzi, quadów i kamperów doceniają elastyczność odbiorów oraz spokój, jaki daje im oddanie sprzętu w nasze ręce.
+            </p>
+          </div>
+          <div class="landing-testimonials-grid">
+            <article class="landing-testimonial-card" aria-label="Opinia klientki Anny">
+              <div class="landing-testimonial-stars" aria-label="Ocena 5 na 5">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <p class="landing-testimonial-quote">
+                „Po oddaniu łodzi do Schowane.pl przestałam martwić się o zimowanie. Wiosną czeka na mnie przygotowana do wodowania, a ja oszczędzam czas i nerwy.”
+              </p>
+              <p class="landing-testimonial-author">Anna, właścicielka łodzi motorowej</p>
+            </article>
+            <article class="landing-testimonial-card" aria-label="Opinia klienta Marcina">
+              <div class="landing-testimonial-stars" aria-label="Ocena 5 na 5">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <p class="landing-testimonial-quote">
+                „Magazyn jest świetnie zabezpieczony, a zespół reaguje błyskawicznie, kiedy potrzebuję wyciągnąć quada na spontaniczny wyjazd.”
+              </p>
+              <p class="landing-testimonial-author">Marcin, miłośnik wypraw off-road</p>
+            </article>
+            <article class="landing-testimonial-card" aria-label="Opinia klienta Ewy i Pawła">
+              <div class="landing-testimonial-stars" aria-label="Ocena 5 na 5">
+                <span aria-hidden="true">★★★★★</span>
+              </div>
+              <p class="landing-testimonial-quote">
+                „Zestaw narciarski i camper wracają w idealnym stanie. Doceniamy raporty serwisowe i możliwość transportu pod dom.”
+              </p>
+              <p class="landing-testimonial-author">Ewa i Paweł, rodzina podróżników</p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="faq" class="landing-faq" aria-labelledby="faq-heading">
+        <div class="landing-section-inner">
+          <div class="landing-section-header">
+            <p class="landing-section-eyebrow">FAQ</p>
+            <h2 id="faq-heading">Najczęściej zadawane pytania</h2>
+            <p class="landing-section-description">
+              Zebraliśmy odpowiedzi na kluczowe pytania dotyczące przechowywania sprzętu w Schowane.pl.
+            </p>
+          </div>
+          <div class="landing-faq-items" role="list">
+            <details class="landing-faq-item">
+              <summary>Jak wygląda proces odbioru sprzętu?</summary>
+              <p>
+                Po rezerwacji kontaktujemy się w celu potwierdzenia szczegółów i terminu odbioru. Nasza ekipa przyjeżdża specjalistycznym transportem lub przygotowuje stanowisko w magazynie, jeśli wolisz dostarczyć sprzęt samodzielnie.
+              </p>
+            </details>
+            <details class="landing-faq-item">
+              <summary>Czy mogę odwiedzać magazyn w trakcie przechowywania?</summary>
+              <p>
+                Tak, wystarczy wcześniejsze zgłoszenie wizyty. Dostęp jest możliwy 7 dni w tygodniu, a nasi pracownicy pomagają w przygotowaniu sprzętu do odbioru.
+              </p>
+            </details>
+            <details class="landing-faq-item">
+              <summary>Jakie dodatkowe usługi serwisowe oferujecie?</summary>
+              <p>
+                Wykonujemy przeglądy kontrolne, ładowanie akumulatorów, detailing oraz przygotowanie sprzętu do sezonu. Na życzenie organizujemy również transport na miejsce wypoczynku.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section id="cta-final" class="landing-cta-final" aria-labelledby="cta-final-heading">
+        <div class="landing-section-inner">
+          <div class="landing-cta-content">
+            <h2 id="cta-final-heading">Gotowy odzyskać przestrzeń i spokój?</h2>
+            <p>
+              Zarezerwuj miejsce w magazynie Schowane.pl i powierz logistykę specjalistom. Przygotujemy indywidualną ofertę i zaplanujemy dogodny termin odbioru.
+            </p>
+            <div class="landing-cta-actions">
+              <a class="landing-button landing-button-primary" href="mailto:rezerwacje@schowane.pl">Zarezerwuj termin</a>
+              <a class="landing-button landing-button-outline" href="tel:+48123456789">Porozmawiaj z doradcą</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     {% endblock %}
     <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>

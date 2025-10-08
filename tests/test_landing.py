@@ -16,3 +16,6 @@ def test_landing_route_returns_success(client):
     assert "Rezerwujesz i umawiasz odbiór" in html
     assert "Elastyczne pakiety dopasowane do Twojego sprzętu" in html
     assert "Mały sprzęt" in html
+    assert "Opinie naszych klientów" in html
+    assert "Najczęściej zadawane pytania" in html
+    assert "Gotowy odzyskać przestrzeń i spokój?" in html

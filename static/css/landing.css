@@ -190,6 +190,10 @@ a {
   flex: 1 1 auto;
 }
 
+.landing-main section {
+  scroll-margin-top: 120px;
+}
+
 .landing-hero {
   position: relative;
   overflow: hidden;
@@ -677,12 +681,167 @@ a {
   font-weight: 600;
 }
 
-.landing-anchor {
-  height: 1px;
-  width: 100%;
+.landing-testimonials {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.02), rgba(28, 78, 216, 0.05));
+}
+
+.landing-testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.landing-testimonial-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 2.25rem 2rem;
+  border-radius: 24px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: var(--landing-surface-color);
+  box-shadow: 0 22px 44px rgba(15, 23, 42, 0.08);
+}
+
+.landing-testimonial-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(28, 78, 216, 0.08), transparent 55%);
+  pointer-events: none;
+}
+
+.landing-testimonial-stars {
+  font-size: 1.25rem;
+  letter-spacing: 0.2em;
+  color: var(--landing-accent-color);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-testimonial-quote {
   margin: 0;
-  padding: 0;
-  scroll-margin-top: 120px;
+  color: var(--landing-secondary-color);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  font-style: italic;
+  position: relative;
+  z-index: 1;
+}
+
+.landing-testimonial-author {
+  margin: 0;
+  font-weight: 600;
+  color: var(--landing-muted-text);
+  position: relative;
+  z-index: 1;
+}
+
+.landing-faq {
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  background: var(--landing-surface-color);
+}
+
+.landing-faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.landing-faq-item {
+  border-radius: 20px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.8), #ffffff);
+  box-shadow: 0 20px 36px rgba(15, 23, 42, 0.08);
+  padding: 0 1.75rem;
+}
+
+.landing-faq-item summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  color: var(--landing-secondary-color);
+  font-size: 1.05rem;
+  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.landing-faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.landing-faq-item summary::after {
+  content: '+';
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--landing-primary-color);
+  transition: transform 0.2s ease;
+}
+
+.landing-faq-item[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.landing-faq-item p {
+  margin: 0 0 1.5rem;
+  color: var(--landing-muted-text);
+  line-height: 1.7;
+}
+
+.landing-cta-final {
+  padding: clamp(3.5rem, 8vw, 6rem) 0 clamp(4rem, 8vw, 6.5rem);
+  background: radial-gradient(circle at top left, rgba(28, 78, 216, 0.16), transparent 55%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.04), rgba(15, 23, 42, 0));
+}
+
+.landing-cta-content {
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(28, 78, 216, 0.92));
+  color: #ffffff;
+  border-radius: 32px;
+  padding: clamp(2.5rem, 6vw, 3.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 32px 60px rgba(15, 23, 42, 0.22);
+}
+
+.landing-cta-content h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+}
+
+.landing-cta-content p {
+  margin: 0 auto;
+  max-width: 42rem;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.landing-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.landing-cta-content .landing-button-outline {
+  background: transparent;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.45);
+}
+
+.landing-cta-content .landing-button-outline:hover,
+.landing-cta-content .landing-button-outline:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
 }
 
   @media (max-width: 1024px) {
@@ -707,6 +866,10 @@ a {
     }
 
     .landing-pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .landing-testimonials-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
@@ -757,6 +920,10 @@ a {
   .landing-pricing-grid {
     grid-template-columns: 1fr;
   }
+
+  .landing-testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 600px) {
@@ -790,6 +957,14 @@ a {
 
   .landing-pricing-card {
     padding: 2.2rem 1.6rem;
+  }
+
+  .landing-testimonial-card {
+    padding: 2rem 1.65rem;
+  }
+
+  .landing-faq-item {
+    padding: 0 1.25rem;
   }
 
   .landing-hero-proof {
