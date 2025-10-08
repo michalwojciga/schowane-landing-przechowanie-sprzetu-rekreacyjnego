@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{% block title %}Schowane.pl — Bezpieczne przechowanie sprzętu rekreacyjnego{% endblock %}</title>
+    <meta
+      name="description"
+      content="Magazyn Schowane.pl zapewnia całoroczne, bezpieczne przechowanie łodzi, quadów, motocykli i innego sprzętu rekreacyjnego."
+    />
+    <meta property="og:title" content="Schowane.pl — Bezpieczne przechowanie sprzętu rekreacyjnego" />
+    <meta
+      property="og:description"
+      content="Dowiedz się, jak działa usługa przechowywania sprzętu w Schowane.pl i zarezerwuj miejsce w nowoczesnym magazynie."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://schowane.pl/landing" />
+    <link rel="canonical" href="https://schowane.pl/landing" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/landing.css') }}" />
+    {% block head_assets %}{% endblock %}
+  </head>
+  <body class="landing-body">
+    {% block body %}
+    <main class="landing-placeholder">
+      <h1>Schowane.pl</h1>
+      <p>Strona landingowa w przygotowaniu.</p>
+    </main>
+    {% endblock %}
+    <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
+  </body>
+</html>
