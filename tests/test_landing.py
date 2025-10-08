@@ -12,3 +12,7 @@ def test_landing_route_returns_success(client):
     assert "Zarezerwuj teraz" in html
     assert "Zaufali nam właściciele sprzętu i operatorzy marin" in html
     assert "Stała ochrona 24/7" in html
+    assert "Przekazujesz sprzęt, my zajmujemy się resztą" in html
+    assert "Rezerwujesz i umawiasz odbiór" in html
+    assert "Elastyczne pakiety dopasowane do Twojego sprzętu" in html
+    assert "Mały sprzęt" in html
