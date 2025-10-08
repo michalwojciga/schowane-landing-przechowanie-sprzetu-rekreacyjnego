@@ -1,9 +1,53 @@
-// Placeholder for future landing page interactions.
-// Example: smooth scrolling, FAQ accordion toggles, telemetry hooks.
 const LANDING_EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const LANDING_EVENT_ENDPOINT = '/landing/events';
+
+const trackLandingEvent = (name, detail = {}) => {
+  if (!name) {
+    return;
+  }
+
+  const payload = JSON.stringify({
+    event: name,
+    detail,
+    ts: new Date().toISOString(),
+  });
+
+  if (navigator.sendBeacon) {
+    try {
+      const blob = new Blob([payload], { type: 'application/json' });
+      navigator.sendBeacon(LANDING_EVENT_ENDPOINT, blob);
+      return;
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.debug('Beacon tracking failed, falling back to fetch.', error);
+    }
+  }
+
+  if (window.fetch) {
+    fetch(LANDING_EVENT_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: payload,
+      keepalive: true,
+    }).catch(() => {
+      // eslint-disable-next-line no-console
+      console.debug('Landing event tracking fetch failed.');
+    });
+  }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   const newsletterForm = document.querySelector('[data-landing-newsletter-form]');
+  const trackableElements = document.querySelectorAll('[data-landing-track]');
+
+  trackableElements.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      const { landingTrack, landingTrackMeta } = event.currentTarget.dataset;
+      trackLandingEvent(landingTrack, landingTrackMeta ? { meta: landingTrackMeta } : {});
+    });
+  });
 
   if (newsletterForm) {
     const emailInput = newsletterForm.querySelector('input[type="email"]');
@@ -62,6 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
       setMessage('Dziękujemy! Potwierdź zapis w wiadomości, którą właśnie wysłaliśmy.', 'is-success');
       newsletterForm.reset();
       emailInput.blur();
+      trackLandingEvent('newsletter-subscribe');
     });
   }
 

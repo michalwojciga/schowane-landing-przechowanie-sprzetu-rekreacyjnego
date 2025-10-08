@@ -24,8 +24,16 @@
     <header class="landing-header" role="banner">
       <div class="landing-header-inner">
         <a class="landing-logo" href="/" aria-label="Schowane.pl — strona główna">
-          <span class="landing-logo-mark" aria-hidden="true">S</span>
-          <span class="landing-logo-text">Schowane.pl</span>
+          <img
+            class="landing-logo-image"
+            src="{{ url_for('static', filename='img/landing/schowane-logo.jpg') }}"
+            alt="Schowane.pl"
+            width="156"
+            height="44"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
         </a>
         <nav class="landing-nav" aria-label="Główna nawigacja">
           <ul class="landing-nav-list">
@@ -34,7 +42,7 @@
             <li><a class="landing-nav-link" href="#pricing">Cennik</a></li>
             <li><a class="landing-nav-link" href="#faq">FAQ</a></li>
             <li class="landing-nav-cta-item">
-              <a class="landing-nav-cta" href="#cta-final">Zarezerwuj</a>
+              <a class="landing-nav-cta" href="#cta-final" data-landing-track="nav-cta">Zarezerwuj</a>
             </li>
           </ul>
         </nav>
@@ -52,8 +60,8 @@
               Ty korzystasz z wolnego miejsca.
             </p>
             <div class="landing-hero-cta">
-              <a class="landing-button landing-button-primary" href="#cta-final">Zarezerwuj teraz</a>
-              <a class="landing-button landing-button-secondary" href="#how-it-works">Dowiedz się więcej</a>
+              <a class="landing-button landing-button-primary" href="#cta-final" data-landing-track="hero-primary">Zarezerwuj teraz</a>
+              <a class="landing-button landing-button-secondary" href="#how-it-works" data-landing-track="hero-secondary">Dowiedz się więcej</a>
             </div>
             <div class="landing-hero-proof" role="note">
               <strong>300+</strong>
@@ -61,11 +69,22 @@
             </div>
           </div>
           <figure class="landing-hero-media">
-            <div
-              class="landing-hero-placeholder"
-              role="img"
-              aria-label="Planowane miejsce na zdjęcie magazynu Schowane.pl z przechowywanym sprzętem rekreacyjnym"
-            ></div>
+            <picture>
+              <source
+                srcset="{{ url_for('static', filename='img/landing/hero-background.jpg') }} 1200w"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                type="image/jpeg"
+              />
+              <img
+                class="landing-hero-image"
+                src="{{ url_for('static', filename='img/landing/hero-background.jpg') }}"
+                alt="Wnętrze magazynu Schowane.pl z przechowywanymi łodziami i quadami"
+                width="1200"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
             <figcaption class="sr-only">Nowoczesny magazyn z monitorowanymi stanowiskami dla sprzętu rekreacyjnego.</figcaption>
           </figure>
         </div>
@@ -113,9 +132,13 @@
             <article class="landing-benefit-card">
               <img
                 class="landing-benefit-icon"
-                src="{{ url_for('static', filename='icons/landing/secure-storage.svg') }}"
+                src="{{ url_for('static', filename='img/landing/ikona-bezpieczenstwo-300.png') }}"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                width="56"
+                height="56"
               />
               <h3>Stała ochrona 24/7</h3>
               <p>Monitoring, kontrola dostępu i ubezpieczenie sprzętu zapewniają spokojną głowę przez cały rok.</p>
@@ -123,9 +146,13 @@
             <article class="landing-benefit-card">
               <img
                 class="landing-benefit-icon"
-                src="{{ url_for('static', filename='icons/landing/climate-control.svg') }}"
+                src="{{ url_for('static', filename='img/landing/ikona-elastyczne-umowy-300.png') }}"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                width="56"
+                height="56"
               />
               <h3>Stabilne warunki przechowywania</h3>
               <p>Dedykowane strefy z kontrolą temperatury i wilgotności chronią sprzęt przed korozją i uszkodzeniami.</p>
@@ -133,9 +160,13 @@
             <article class="landing-benefit-card">
               <img
                 class="landing-benefit-icon"
-                src="{{ url_for('static', filename='icons/landing/service-support.svg') }}"
+                src="{{ url_for('static', filename='img/landing/ikona-serwis-i-konserwacja-300.png') }}"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                width="56"
+                height="56"
               />
               <h3>Wsparcie serwisowe na miejscu</h3>
               <p>Przeprowadzamy przeglądy, ładowanie akumulatorów i przygotowanie do sezonu bez dodatkowej logistyki.</p>
@@ -143,9 +174,13 @@
             <article class="landing-benefit-card">
               <img
                 class="landing-benefit-icon"
-                src="{{ url_for('static', filename='icons/landing/easy-access.svg') }}"
+                src="{{ url_for('static', filename='img/landing/Ikona-odbior-i-dostawa-300.png') }}"
                 alt=""
                 aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                width="56"
+                height="56"
               />
               <h3>Szybki dostęp na życzenie</h3>
               <p>Zgłaszasz wyjazd, a my szykujemy sprzęt do odbioru lub transportujemy go pod wskazany adres.</p>
@@ -350,8 +385,20 @@
               Zarezerwuj miejsce w magazynie Schowane.pl i powierz logistykę specjalistom. Przygotujemy indywidualną ofertę i zaplanujemy dogodny termin odbioru.
             </p>
             <div class="landing-cta-actions">
-              <a class="landing-button landing-button-primary" href="mailto:rezerwacje@schowane.pl">Zarezerwuj termin</a>
-              <a class="landing-button landing-button-outline" href="tel:+48123456789">Porozmawiaj z doradcą</a>
+              <a
+                class="landing-button landing-button-primary"
+                href="mailto:kontakt.schowane@gmail.com"
+                data-landing-track="cta-final-email"
+              >
+                Zarezerwuj termin
+              </a>
+              <a
+                class="landing-button landing-button-outline"
+                href="tel:+48603305030"
+                data-landing-track="cta-final-phone"
+              >
+                Porozmawiaj z doradcą
+              </a>
             </div>
           </div>
         </div>
@@ -363,29 +410,36 @@
         <div class="landing-footer-grid">
           <div class="landing-footer-column">
             <a class="landing-footer-logo" href="/" aria-label="Schowane.pl — strona główna">
-              <span class="landing-logo-mark" aria-hidden="true">S</span>
-              <span class="landing-logo-text">Schowane.pl</span>
+              <img
+                class="landing-footer-logo-image"
+                src="{{ url_for('static', filename='img/landing/schowane-logo.jpg') }}"
+                alt="Schowane.pl"
+                width="176"
+                height="48"
+                loading="lazy"
+                decoding="async"
+              />
             </a>
             <p class="landing-footer-description">
               Magazyn premium pod Krakowem. Całoroczne przechowywanie sprzętu rekreacyjnego z serwisem, monitoringiem i elastycznym dostępem na życzenie.
             </p>
             <ul class="landing-footer-contact" aria-label="Dane kontaktowe">
               <li>
-                <a class="landing-footer-link" href="tel:+48123456789">
+                <a class="landing-footer-link" href="tel:+48603305030">
                   <span aria-hidden="true">☎</span>
-                  <span>+48&nbsp;123&nbsp;456&nbsp;789</span>
+                  <span>+48&nbsp;603&nbsp;30&nbsp;50&nbsp;30</span>
                 </a>
               </li>
               <li>
-                <a class="landing-footer-link" href="mailto:kontakt@schowane.pl">
+                <a class="landing-footer-link" href="mailto:kontakt.schowane@gmail.com">
                   <span aria-hidden="true">✉</span>
-                  <span>kontakt@schowane.pl</span>
+                  <span>kontakt.schowane@gmail.com</span>
                 </a>
               </li>
               <li>
                 <address class="landing-footer-address">
                   <span aria-hidden="true">📍</span>
-                  <span>ul. Magazynowa 12, 32-060 Liszki</span>
+                  <span>Poradów, 26<br />GPS: 83J2+7FC Poradów</span>
                 </address>
               </li>
             </ul>
@@ -459,8 +513,10 @@
         <div class="landing-footer-bottom">
           <p>© {{ current_year | default(2024) }} Schowane.pl sp. z o.o. Wszelkie prawa zastrzeżone.</p>
           <div class="landing-footer-bottom-links">
-            <a class="landing-footer-link" href="/polityka-prywatnosci">Polityka prywatności</a>
-            <a class="landing-footer-link" href="/regulamin">Regulamin</a>
+            <a class="landing-footer-link" href="https://www.schowane.pl/privacy-policy/" rel="noopener">Polityka prywatności</a>
+            <a class="landing-footer-link" href="https://www.schowane.pl/regulamin-przechowalni-rzeczy-schowane-pl/" rel="noopener"
+              >Regulamin</a
+            >
           </div>
         </div>
       </div>

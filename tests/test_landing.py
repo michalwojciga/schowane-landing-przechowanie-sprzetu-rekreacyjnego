@@ -22,3 +22,6 @@ def test_landing_route_returns_success(client):
     assert "Dołącz do newslettera" in html
     assert "Polityka prywatności" in html
     assert "Schowane.pl sp. z o.o." in html
+    assert "kontakt.schowane@gmail.com" in html
+    assert "+48&nbsp;603&nbsp;30&nbsp;50&nbsp;30" in html
+    assert "Poradów, 26" in html

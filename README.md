@@ -31,3 +31,18 @@ Aplikacja będzie dostępna pod adresem `http://127.0.0.1:5000/landing`.
 ```bash
 pytest
 ```
+
+## Dokumentacja dodatkowa
+
+- [`docs/seo-recommendations.md`](docs/seo-recommendations.md) – lista priorytetów
+  SEO wraz z kolejnymi krokami optymalizacji po wdrożeniu landing page.
+- [`docs/cta-telemetry-guide.md`](docs/cta-telemetry-guide.md) – opis przepływu
+  danych, konfiguracji loggera oraz sposobów analizy kliknięć CTA.
+
+## Changelog
+
+### PR7 – Kontent i optymalizacja
+- Wprowadzono finalny branding (kolor przewodni #31A744) wraz z aktualizacją stylów i logotypów.
+- Podmieniono obrazy sekcji hero i korzyści na docelowe zasoby z atrybutami `loading="lazy"` i `srcset`.
+- Dodano lekki mechanizm telemetryczny (`/landing/events`) rejestrujący kliknięcia CTA oraz subskrypcje newslettera.
+- Zaktualizowano dane kontaktowe, linki prawne oraz CTA w stopce i sekcji końcowej.
