@@ -20,7 +20,7 @@
 ### PR 2: Nawigacja i sekcja Hero
 - [ ] Implementacja sekcji `<header>` i sticky navbaru (logo, linki: Jak to działa, Korzyści, Cennik, FAQ, CTA "Zarezerwuj").
 - [ ] Sekcja Hero: nagłówek, podnagłówek, dwa przyciski CTA, social proof liczbowy.
-- [ ] Osadzenie obrazu tła (rzeczywiste zdjęcie lub grafika wygenerowana wg promptu). Zapis grafiki w `static/img/landing/hero.jpg`.
+- [ ] Osadzenie docelowego obrazu tła (rzeczywiste zdjęcie lub grafika wygenerowana wg promptu). Tymczasowy placeholder znajduje się w `static/img/landing/image-placeholder.txt` i należy go podmienić finalnym plikiem graficznym.
 - [ ] Dodanie stylów responsywnych dla hero i navbaru (flex/grid, sticky effect, CTA hover).
 - [ ] Rozszerzenie testu sprawdzającego obecność linków w HTML (np. `Jak to działa`).
 

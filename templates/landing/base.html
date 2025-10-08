@@ -20,10 +20,61 @@
     {% block head_assets %}{% endblock %}
   </head>
   <body class="landing-body">
+    <a class="landing-skip-link" href="#main-content">Przejdź do treści</a>
+    <header class="landing-header" role="banner">
+      <div class="landing-header-inner">
+        <a class="landing-logo" href="/" aria-label="Schowane.pl — strona główna">
+          <span class="landing-logo-mark" aria-hidden="true">S</span>
+          <span class="landing-logo-text">Schowane.pl</span>
+        </a>
+        <nav class="landing-nav" aria-label="Główna nawigacja">
+          <ul class="landing-nav-list">
+            <li><a class="landing-nav-link" href="#how-it-works">Jak to działa</a></li>
+            <li><a class="landing-nav-link" href="#benefits">Korzyści</a></li>
+            <li><a class="landing-nav-link" href="#pricing">Cennik</a></li>
+            <li><a class="landing-nav-link" href="#faq">FAQ</a></li>
+            <li class="landing-nav-cta-item">
+              <a class="landing-nav-cta" href="#cta-final">Zarezerwuj</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     {% block body %}
-    <main class="landing-placeholder">
-      <h1>Schowane.pl</h1>
-      <p>Strona landingowa w przygotowaniu.</p>
+    <main id="main-content" class="landing-main" tabindex="-1">
+      <section id="hero" class="landing-hero" aria-labelledby="hero-heading">
+        <div class="landing-hero-grid">
+          <div class="landing-hero-content">
+            <p class="landing-hero-eyebrow">Nowoczesna przechowalnia pod Krakowem</p>
+            <h1 id="hero-heading">Bezpieczne przechowanie Twojego sprzętu rekreacyjnego</h1>
+            <p class="landing-hero-description">
+              Odzyskaj przestrzeń w garażu i oddaj łódź, quad czy motocykl w nasze ręce. Magazynujemy, serwisujemy i dostarczamy —
+              Ty korzystasz z wolnego miejsca.
+            </p>
+            <div class="landing-hero-cta">
+              <a class="landing-button landing-button-primary" href="#cta-final">Zarezerwuj teraz</a>
+              <a class="landing-button landing-button-secondary" href="#how-it-works">Dowiedz się więcej</a>
+            </div>
+            <div class="landing-hero-proof" role="note">
+              <strong>300+</strong>
+              <span>przechowanych łodzi, quadów i motocykli w 2024 roku</span>
+            </div>
+          </div>
+          <figure class="landing-hero-media">
+            <div
+              class="landing-hero-placeholder"
+              role="img"
+              aria-label="Planowane miejsce na zdjęcie magazynu Schowane.pl z przechowywanym sprzętem rekreacyjnym"
+            ></div>
+            <figcaption class="sr-only">Nowoczesny magazyn z monitorowanymi stanowiskami dla sprzętu rekreacyjnego.</figcaption>
+          </figure>
+        </div>
+      </section>
+      <div id="how-it-works" class="landing-anchor" aria-hidden="true"></div>
+      <div id="benefits" class="landing-anchor" aria-hidden="true"></div>
+      <div id="pricing" class="landing-anchor" aria-hidden="true"></div>
+      <div id="faq" class="landing-anchor" aria-hidden="true"></div>
+      <div id="cta-final" class="landing-anchor" aria-hidden="true"></div>
     </main>
     {% endblock %}
     <script src="{{ url_for('static', filename='js/landing.js') }}" defer></script>
