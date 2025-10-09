@@ -68,25 +68,81 @@
               <span>przechowanych łodzi, quadów i motocykli w 2024 roku</span>
             </div>
           </div>
-          <figure class="landing-hero-media">
-            <picture>
-              <source
-                srcset="{{ url_for('static', filename='img/landing/hero-background.jpg') }} 1200w"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
-                type="image/jpeg"
-              />
-              <img
-                class="landing-hero-image"
-                src="{{ url_for('static', filename='img/landing/hero-background.jpg') }}"
-                alt="Wnętrze magazynu Schowane.pl z przechowywanymi łodziami i quadami"
-                width="1200"
-                height="900"
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-            <figcaption class="sr-only">Nowoczesny magazyn z monitorowanymi stanowiskami dla sprzętu rekreacyjnego.</figcaption>
-          </figure>
+          <div class="landing-hero-media" role="group" aria-label="Galeria magazynu Schowane.pl">
+            <div class="landing-hero-carousel" data-landing-hero-carousel>
+              <div class="landing-hero-carousel-viewport">
+                <ul class="landing-hero-carousel-track">
+                  <li class="landing-hero-slide is-active" data-landing-hero-slide>
+                    <figure>
+                      <img
+                        src="{{ url_for('static', filename='img/landing/hero-background.jpg') }}"
+                        srcset="{{ url_for('static', filename='img/landing/hero-background.jpg') }} 1200w"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                        alt="Wnętrze magazynu Schowane.pl z przechowywanymi łodziami i quadami"
+                        width="1200"
+                        height="900"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>Strefa przechowywania z wydzielonymi stanowiskami i monitoringiem.</figcaption>
+                    </figure>
+                  </li>
+                  <li class="landing-hero-slide" data-landing-hero-slide>
+                    <figure>
+                      <img
+                        src="{{ url_for('static', filename='img/landing/hero-placeholder-1.svg') }}"
+                        alt="Schemat procesu obsługi klienta w magazynie Schowane.pl"
+                        width="1200"
+                        height="900"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>Przejrzysty schemat obsługi — od odbioru sprzętu po sezonową konserwację.</figcaption>
+                    </figure>
+                  </li>
+                  <li class="landing-hero-slide" data-landing-hero-slide>
+                    <figure>
+                      <img
+                        src="{{ url_for('static', filename='img/landing/hero-placeholder-2.svg') }}"
+                        alt="Widok operatorów przygotowujących sprzęt rekreacyjny do wydania"
+                        width="1200"
+                        height="900"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption>Zespół operatorów przygotowuje sprzęt klientów do szybkiego wydania.</figcaption>
+                    </figure>
+                  </li>
+                </ul>
+              </div>
+              <div class="landing-hero-carousel-controls">
+                <div class="landing-hero-carousel-buttons">
+                  <button
+                    type="button"
+                    class="landing-hero-carousel-button"
+                    data-landing-hero-prev
+                    aria-label="Poprzedni obraz"
+                  >
+                    <span aria-hidden="true">&#x2039;</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="landing-hero-carousel-button"
+                    data-landing-hero-next
+                    aria-label="Następny obraz"
+                  >
+                    <span aria-hidden="true">&#x203a;</span>
+                  </button>
+                </div>
+                <div
+                  class="landing-hero-carousel-dots"
+                  role="group"
+                  aria-label="Wybierz slajd z galerii"
+                  data-landing-hero-dots
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section class="landing-partners" aria-labelledby="partners-heading">

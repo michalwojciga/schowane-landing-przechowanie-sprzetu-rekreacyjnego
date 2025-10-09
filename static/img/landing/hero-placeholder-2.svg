@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Zespół operatorów Schowane.pl</title>
+  <desc id="desc">Ilustracja przedstawia operatorów przygotowujących sprzęt klientów do wydania.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbfcfe" />
+      <stop offset="1" stop-color="#d9dee6" />
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#31a744" stop-opacity="0.45" />
+      <stop offset="1" stop-color="#31a744" stop-opacity="0.05" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" rx="48" />
+  <g fill="#ffffff" stroke="#2b3345" stroke-width="4" stroke-linejoin="round" opacity="0.9">
+    <rect x="140" y="200" width="320" height="440" rx="40" />
+    <rect x="440" y="260" width="320" height="440" rx="40" />
+    <rect x="760" y="200" width="320" height="440" rx="40" />
+  </g>
+  <g fill="#133221" opacity="0.85">
+    <circle cx="300" cy="320" r="70" />
+    <circle cx="600" cy="380" r="70" />
+    <circle cx="900" cy="320" r="70" />
+  </g>
+  <g fill="#31a744" opacity="0.85">
+    <path d="M260 420h80v200h-80z" />
+    <path d="M560 480h80v200h-80z" />
+    <path d="M860 420h80v200h-80z" />
+  </g>
+  <g fill="url(#beam)" opacity="0.8">
+    <rect x="260" y="420" width="80" height="220" rx="32" />
+    <rect x="560" y="480" width="80" height="220" rx="32" />
+    <rect x="860" y="420" width="80" height="220" rx="32" />
+  </g>
+  <g fill="#1d2a3a" font-family="'Inter', sans-serif" font-size="40" font-weight="600" text-anchor="middle">
+    <text x="300" y="690">Check lista</text>
+    <text x="600" y="750">Konserwacja</text>
+    <text x="900" y="690">Wydanie</text>
+  </g>
+  <rect x="220" y="760" width="760" height="80" rx="40" fill="#133221" opacity="0.75" />
+  <text x="600" y="812" text-anchor="middle" fill="#ffffff" font-family="'Inter', sans-serif" font-size="44" font-weight="600">
+    Operatorzy w gotowości przez cały sezon
+  </text>
+</svg>

@@ -38,6 +38,8 @@ pytest
   SEO wraz z kolejnymi krokami optymalizacji po wdrożeniu landing page.
 - [`docs/cta-telemetry-guide.md`](docs/cta-telemetry-guide.md) – opis przepływu
   danych, konfiguracji loggera oraz sposobów analizy kliknięć CTA.
+- [`docs/newsletter-operations.md`](docs/newsletter-operations.md) – prosty,
+  manualny proces obsługi zapisów newslettera na bazie logów aplikacyjnych.
 
 ## Changelog
 
@@ -46,3 +48,8 @@ pytest
 - Podmieniono obrazy sekcji hero i korzyści na docelowe zasoby z atrybutami `loading="lazy"` i `srcset`.
 - Dodano lekki mechanizm telemetryczny (`/landing/events`) rejestrujący kliknięcia CTA oraz subskrypcje newslettera.
 - Zaktualizowano dane kontaktowe, linki prawne oraz CTA w stopce i sekcji końcowej.
+
+### PR8 – Odświeżenie wizualne i newsletter
+- Zastąpiono zielone gradienty neutralnymi szarościami, utrzymując brandowe CTA.
+- Przebudowano sekcję hero na karuzelę z trzema slajdami (lazy-load, sterowanie przyciskami i punktami).
+- Dodano wektorowe placeholdery dla brakujących grafik i dokumentację ręcznej obsługi zapisów newslettera.

@@ -71,6 +71,17 @@
 - Ujednolicono branding na kolorze podstawowym #31A744 oraz zaktualizowano dane kontaktowe, linki prawne i CTA.
 - Dodano lekki mechanizm telemetryczny (beacon/fetch) wysyłający zdarzenia CTA do endpointu `/landing/events` logującego dane po stronie serwera.
 
+### PR 8: Odświeżenie wizualne i hero carousel
+- [x] Przebudowa sekcji hero pod karuzelę ze slajdami (3 grafiki, lazy-load, sterowanie klawiaturą).
+- [x] Redukcja zielonych gradientów na tle na rzecz neutralnych szarości przy zachowaniu brandowych CTA.
+- [x] Dodanie placeholders SVG dla brakujących grafik i opisów figcaption zwiększających dostępność.
+- [x] Opracowanie lekkiego procesu obsługi zapisów newsletterowych z ręcznym przetwarzaniem (patrz `docs/newsletter-operations.md`).
+
+#### Notatki wdrożeniowe PR 8
+- Karuzela działa bez zewnętrznych bibliotek: automatyczne przewijanie co 8 s, sterowanie strzałkami i wskaźnikiem dot.
+- Neutralna paleta (#eef1f5/#d9dee6) została zastosowana w gradientach sekcji, co zmniejsza nasycenie zieleni przy zachowaniu kontrastu.
+- Dokument operacyjny opisuje codzienną rutynę operatora: eksport logów CTA do CSV i ręczne wysyłanie powitań.
+
 ## Dodatkowe notatki
 - Ikony i grafiki generować zgodnie z promptami z `docs/landing-page-plan.md` i zapisać w repo (jeśli dostępne narzędzia) lub pozostawić placeholdery z opisem.
 - Każdy PR powinien aktualizować snapshot HTML (jeśli korzystamy z testów opartych na `BeautifulSoup`) oraz upewnić się, że stylizacja nie łamie layoutu mobilnego (<768px).

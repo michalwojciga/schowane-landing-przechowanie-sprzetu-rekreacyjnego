@@ -41,6 +41,7 @@ const trackLandingEvent = (name, detail = {}) => {
 document.addEventListener('DOMContentLoaded', () => {
   const newsletterForm = document.querySelector('[data-landing-newsletter-form]');
   const trackableElements = document.querySelectorAll('[data-landing-track]');
+  const heroCarousel = document.querySelector('[data-landing-hero-carousel]');
 
   trackableElements.forEach((element) => {
     element.addEventListener('click', (event) => {
@@ -48,6 +49,97 @@ document.addEventListener('DOMContentLoaded', () => {
       trackLandingEvent(landingTrack, landingTrackMeta ? { meta: landingTrackMeta } : {});
     });
   });
+
+  if (heroCarousel) {
+    const track = heroCarousel.querySelector('.landing-hero-carousel-track');
+    const slides = Array.from(heroCarousel.querySelectorAll('[data-landing-hero-slide]'));
+    const prevButton = heroCarousel.querySelector('[data-landing-hero-prev]');
+    const nextButton = heroCarousel.querySelector('[data-landing-hero-next]');
+    const dotsContainer = heroCarousel.querySelector('[data-landing-hero-dots]');
+    const AUTOPLAY_INTERVAL = 8000;
+    let autoplayTimer = null;
+    let currentIndex = 0;
+
+    const goTo = (index) => {
+      if (!track || slides.length === 0) {
+        return;
+      }
+
+      currentIndex = (index + slides.length) % slides.length;
+
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+      slides.forEach((slide, slideIndex) => {
+        const isActive = slideIndex === currentIndex;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      });
+
+      if (dotsContainer) {
+        dotsContainer.querySelectorAll('.landing-hero-carousel-dot').forEach((dot, dotIndex) => {
+          const isActive = dotIndex === currentIndex;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+      }
+    };
+
+    const stopAutoplay = () => {
+      if (autoplayTimer) {
+        window.clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    };
+
+    const startAutoplay = () => {
+      stopAutoplay();
+
+      if (slides.length <= 1) {
+        return;
+      }
+
+      autoplayTimer = window.setInterval(() => {
+        goTo(currentIndex + 1);
+      }, AUTOPLAY_INTERVAL);
+    };
+
+    if (dotsContainer) {
+      slides.forEach((_, slideIndex) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'landing-hero-carousel-dot';
+        dot.setAttribute('aria-label', `Slajd ${slideIndex + 1} z ${slides.length}`);
+        dot.setAttribute('aria-pressed', slideIndex === 0 ? 'true' : 'false');
+        dot.addEventListener('click', () => {
+          goTo(slideIndex);
+          startAutoplay();
+        });
+        dotsContainer.append(dot);
+      });
+    }
+
+    if (prevButton) {
+      prevButton.addEventListener('click', () => {
+        goTo(currentIndex - 1);
+        startAutoplay();
+      });
+    }
+
+    if (nextButton) {
+      nextButton.addEventListener('click', () => {
+        goTo(currentIndex + 1);
+        startAutoplay();
+      });
+    }
+
+    heroCarousel.addEventListener('mouseenter', stopAutoplay);
+    heroCarousel.addEventListener('mouseleave', startAutoplay);
+    heroCarousel.addEventListener('focusin', stopAutoplay);
+    heroCarousel.addEventListener('focusout', startAutoplay);
+
+    goTo(0);
+    startAutoplay();
+  }
 
   if (newsletterForm) {
     const emailInput = newsletterForm.querySelector('input[type="email"]');

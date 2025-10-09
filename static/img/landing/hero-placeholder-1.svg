@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Schemat obsługi klienta Schowane.pl</title>
+  <desc id="desc">Ilustracja przedstawia proces przyjmowania sprzętu, przechowania i przygotowania do sezonu.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eef1f5" />
+      <stop offset="1" stop-color="#d9dee6" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#31a744" stop-opacity="0.15" />
+      <stop offset="1" stop-color="#31a744" stop-opacity="0.5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)" rx="48" />
+  <g fill="none" stroke="#2b3345" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.7">
+    <rect x="220" y="220" width="220" height="160" rx="20" />
+    <rect x="490" y="340" width="220" height="160" rx="20" />
+    <rect x="760" y="220" width="220" height="160" rx="20" />
+    <path d="M440 300h50" />
+    <path d="M710 420h50" />
+    <path d="M600 500v100" />
+  </g>
+  <g fill="#31a744" opacity="0.85">
+    <circle cx="330" cy="300" r="24" />
+    <circle cx="600" cy="420" r="24" />
+    <circle cx="870" cy="300" r="24" />
+  </g>
+  <g fill="#1d2a3a" opacity="0.8" font-family="'Inter', sans-serif" font-size="42" font-weight="600">
+    <text x="210" y="640">Odbiór sprzętu</text>
+    <text x="530" y="720">Magazynowanie</text>
+    <text x="770" y="640">Przygotowanie</text>
+  </g>
+  <rect x="280" y="660" width="640" height="120" rx="60" fill="url(#accent)" />
+  <text x="600" y="735" text-anchor="middle" fill="#133221" font-family="'Inter', sans-serif" font-size="48" font-weight="600">
+    Twoja logistyka w trzech krokach
+  </text>
+</svg>
