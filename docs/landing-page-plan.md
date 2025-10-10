@@ -2,7 +2,7 @@
 
 # Cel strony
 
-Celem landing page jest przystawienie oferty przechowania sprętutre rekreacyjnégo (todzie, quady, motocykle, rowery, narty itp.), wyjasnienie korzySci, pokazanie jak działa użuga oraz zachecenie uzytkownika do zlozenia zapytania lub rezerwymi几点ca. Strona powinna byc spojna wizualnie ze stronagłowyna Schowane.pl (kolorystyka, typografia) i prosta w nawigazzi.
+Celem landing page jest przystawienie oferty przechowania sprzętu rekreacyjnégo (łodzie, quady, motocykle, rowery, narty itp.), wyjasnienie korzySci, pokazanie jak działa użuga oraz zachecenie uzytkownika do zlozenia zapytania lub rezerwymi几点ca. Strona powinna byc spojna wizualnie ze stronagłowyna Schowane.pl (kolorystyka, typografia) i prosta w nawigazzi.
 
 # Struktura strony (zgodnie z załoczonym schematem)
 
@@ -45,10 +45,10 @@ Celem landing page jest przystawienie oferty przechowania sprętutre rekreacyjn�
 25. Sekcja rekomendacdji (Testimonials)  
 26. Uzyj 2-3 krótkich opinii klienów (fikcyjne cytaty, do podmiany po otrzymaniu rzechywistych opinii):
 
-$>$  „Dziecki Schowane.pl mischief motocykl był gotowy do jazdy na wiosné. Obsługa na medal!" - Anna, Kraków  
-$>$  "Miałem kłopot z mistręcsem na lódź - teraz co roku oddaję są do magazynu Schowane.pl i nie martwie są o nic." - Piotr, Wieliczka
+$>$  „Dzięki Schowane.pl mój motocykl był gotowy do jazdy na wiosnę. Obsługa na medal!" - Anna, Kraków  
+$>$  "Miałem kłopot z miejscem na lódź - teraz co roku oddaję są do magazynu Schowane.pl i nie martwie są o nic." - Piotr, Wieliczka
 
-27. Pod kaczę opinia sąma uciescić małę akone 5 gwiazdek.  
+27. Pod każdą opinią sąma umiesć małą ikone 5 gwiazdek.  
 28. FAQ (Najczyciej zadawane pytania)  
 29. Przygotuj 4-5 pytań i odpowiedzi, które rozwiewaja wąpliwość uzytkowników, np.:
 
@@ -60,7 +60,7 @@ Czy swiadczcie u战胜 serwisowe? - Oferujemy mycie i konserwaczę hodzi/motocyk
 
 # 30. Sekcja CTA
 
-31. Duzy, wyrózniajocy sie bloc z haslem zachecajycym do dzialania, np. „Zarezerwuj.),nzime zuż teraz i skorzystaj z rabatu  $10\%$ "  
+31. Duzy, wyrózniajocy sie blok z haslem zachecajycym do dzialania, np. „Zarezerwuj.),na zime zuż teraz i skorzystaj z rabatu  $10\%$ "  
 32. Przyciski CTA mogę kierować do formularza kontaktowego lub numeru Telefonu.  
 33. Tlo kontrastujace (np. ciemniejszy kolor) i duzy, wyraźny tekst.
 

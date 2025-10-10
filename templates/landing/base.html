@@ -90,7 +90,7 @@
                   <li class="landing-hero-slide" data-landing-hero-slide>
                     <figure>
                       <img
-                        src="{{ url_for('static', filename='img/landing/hero-placeholder-1.svg') }}"
+                        src="{{ url_for('static', filename='img/landing/hero-mechanik.png') }}"
                         alt="Schemat procesu obsługi klienta w magazynie Schowane.pl"
                         width="1200"
                         height="900"
@@ -103,14 +103,14 @@
                   <li class="landing-hero-slide" data-landing-hero-slide>
                     <figure>
                       <img
-                        src="{{ url_for('static', filename='img/landing/hero-placeholder-2.svg') }}"
-                        alt="Widok operatorów przygotowujących sprzęt rekreacyjny do wydania"
+                        src="{{ url_for('static', filename='img/landing/hero-przechowanie-jachtu.png') }}"
+                        alt="Widok operatorów przyjmujących sprzęt rekreacyjny do magazynu"
                         width="1200"
                         height="900"
                         loading="lazy"
                         decoding="async"
                       />
-                      <figcaption>Zespół operatorów przygotowuje sprzęt klientów do szybkiego wydania.</figcaption>
+                      <figcaption>Zespół operatorów przyjmuje sprzęt klientów na posezonowe przechowanie.</figcaption>
                     </figure>
                   </li>
                 </ul>
@@ -495,7 +495,7 @@
               <li>
                 <address class="landing-footer-address">
                   <span aria-hidden="true">📍</span>
-                  <span>Poradów, 26<br />GPS: 83J2+7FC Poradów</span>
+                  <span>Poradów, 26 (30 km od Krakowa)<br /><a href="https://maps.app.goo.gl/xGVt5Up7WKafEmFf6">GPS: 83J2+7FC Poradów</a></span>
                 </address>
               </li>
             </ul>
@@ -567,7 +567,7 @@
           </div>
         </div>
         <div class="landing-footer-bottom">
-          <p>© {{ current_year | default(2024) }} Schowane.pl sp. z o.o. Wszelkie prawa zastrzeżone.</p>
+          <p>© {{ current_year | default(2024) }} Schowane.pl | Wszelkie prawa zastrzeżone.</p>
           <div class="landing-footer-bottom-links">
             <a class="landing-footer-link" href="https://www.schowane.pl/privacy-policy/" rel="noopener">Polityka prywatności</a>
             <a class="landing-footer-link" href="https://www.schowane.pl/regulamin-przechowalni-rzeczy-schowane-pl/" rel="noopener"
