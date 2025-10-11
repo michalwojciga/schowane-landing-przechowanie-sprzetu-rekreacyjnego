@@ -1,9 +1,44 @@
 """Application factory for the Schowane landing page project."""
 from __future__ import annotations
 
+from logging.config import dictConfig
 from pathlib import Path
 
 from app.lib.flask_compat import Flask
+
+LOGGING = {
+    "version": 1,
+    "loggers": {
+        "app.landing.events": {
+            "handlers": ["cta_events", "newsletter"],
+            "level": "INFO",
+            "propagate": False,
+        },
+    },
+    "handlers": {
+        "cta_events": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "logs/landing-cta.log",
+            "maxBytes": 5 * 1024 * 1024,
+            "backupCount": 5,
+            "formatter": "json",
+        },
+        "newsletter": {
+            "class": "logging.handlers.RotatingFileHandler",
+            "filename": "logs/newsletter.log",
+            "maxBytes": 1 * 1024 * 1024,
+            "backupCount": 3,
+            "encoding": "utf-8",
+            "formatter": "json",
+        },
+    },
+    "formatters": {
+        "json": {
+            "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
+            "fmt": "%(asctime)s %(event)s %(detail)s %(user_agent)s",
+        },
+    },
+}
 
 
 def create_app() -> Flask:
@@ -14,6 +49,8 @@ def create_app() -> Flask:
         static_folder=str(project_root / "static"),
         template_folder=str(project_root / "templates"),
     )
+
+    dictConfig(LOGGING)
 
     from .landing import landing_bp  # noqa: WPS433 (delayed import to register blueprint)
 
