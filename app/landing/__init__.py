@@ -12,18 +12,18 @@ try:  # pragma: no cover - optional import in offline tests
 except ModuleNotFoundError:  # pragma: no cover - fallback for stubbed Flask
     request = None  # type: ignore[assignment]
 
-landing_bp = Blueprint("landing", __name__, url_prefix="/landing/przechowanie-sprzetu-rekreacyjnego")
+landing_bp = Blueprint("landing", __name__, url_prefix="/landing")
 logger = logging.getLogger("app.landing.events")
 
 
-@landing_bp.get("/landing")
+@landing_bp.get("/", strict_slashes=False)
 def landing_home() -> str:
     """Render the base landing page template."""
     current_year = datetime.now(timezone.utc).year
     return render_template("landing/base.html", current_year=current_year)
 
 
-@landing_bp.route("/landing/events", methods=("POST",))
+@landing_bp.route("/events", methods=("POST",))
 def landing_event_ping() -> tuple[str, int]:
     """Receive async telemetry events from the landing page CTA interactions."""
 

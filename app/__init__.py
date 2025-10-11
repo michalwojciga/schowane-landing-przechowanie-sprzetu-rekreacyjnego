@@ -34,7 +34,7 @@ LOGGING = {
     },
     "formatters": {
         "json": {
-            "()": "pythonjsonlogger.jsonlogger.JsonFormatter",
+            "()": "app.lib.json_logging.JsonFormatter",
             "fmt": "%(asctime)s %(event)s %(detail)s %(user_agent)s",
         },
     },
@@ -44,6 +44,15 @@ LOGGING = {
 def create_app() -> Flask:
     """Create and configure the Flask application instance."""
     project_root = Path(__file__).resolve().parent.parent
+    logs_path = project_root / "logs"
+    logs_path.mkdir(parents=True, exist_ok=True)
+
+    LOGGING["handlers"]["cta_events"]["filename"] = str(
+        logs_path / "landing-cta.log"
+    )
+    LOGGING["handlers"]["newsletter"]["filename"] = str(
+        logs_path / "newsletter.log"
+    )
     app = Flask(
         __name__,
         static_folder=str(project_root / "static"),
