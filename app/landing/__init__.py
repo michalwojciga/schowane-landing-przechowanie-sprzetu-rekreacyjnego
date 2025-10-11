@@ -12,7 +12,7 @@ try:  # pragma: no cover - optional import in offline tests
 except ModuleNotFoundError:  # pragma: no cover - fallback for stubbed Flask
     request = None  # type: ignore[assignment]
 
-landing_bp = Blueprint("landing", __name__, url_prefix="/landing")
+landing_bp = Blueprint("landing", __name__, url_prefix="/")
 logger = logging.getLogger("app.landing.events")
 
 
