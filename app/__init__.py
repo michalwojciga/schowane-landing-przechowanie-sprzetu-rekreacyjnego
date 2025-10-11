@@ -1,10 +1,12 @@
+# /app/__init__.py
+
 """Application factory for the Schowane landing page project."""
 from __future__ import annotations
 
 from logging.config import dictConfig
 from pathlib import Path
 
-from app.lib.flask_compat import Flask
+from app.lib.flask_compat import Flask, redirect, url_for
 
 LOGGING = {
     "version": 1,
@@ -65,14 +67,14 @@ def create_app() -> Flask:
 
     app.register_blueprint(landing_bp)
 
-    @app.get("/")
-    def index() -> tuple[str, int]:
+    @app.get("/", strict_slashes=False)
+    def index():
         """Return a simple index response.
-
         The root route redirects users to the landing page implementation once it is ready.
         For now we return a placeholder response to confirm the app is running.
         """
+        return redirect(url_for("landing.landing_home"), code=301)
 
-        return "Schowane landing page backend is running.", 200
+        #return "Schowane landing page backend is running.", 200
 
     return app

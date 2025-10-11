@@ -1,3 +1,5 @@
+# /app/landing/__init__.py
+
 """Landing page blueprint module."""
 from __future__ import annotations
 
