@@ -10,6 +10,21 @@
 
       gtag('config', 'AW-1051860125');
     </script>
+    <script>
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'ads_conversion_Pro_ba_o_wycen__1', {
+          send_to: 'AW-1051860125/ads_conversion_Pro_ba_o_wycen__1',
+          event_callback: callback,
+          event_timeout: 2000,
+        });
+        return false;
+      }
+    </script>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -70,7 +85,12 @@
               Ty korzystasz z wolnego miejsca.
             </p>
             <div class="landing-hero-cta">
-              <a class="landing-button landing-button-primary" href="#cta-final" data-landing-track="hero-primary">Zarezerwuj teraz</a>
+              <a
+                class="landing-button landing-button-primary"
+                href="#cta-final"
+                data-landing-track="hero-primary"
+                onclick="return gtagSendEvent('#cta-final');"
+              >Zarezerwuj teraz</a>
               <a class="landing-button landing-button-secondary" href="#how-it-works" data-landing-track="hero-secondary">Dowiedz się więcej</a>
             </div>
             <div class="landing-hero-proof" role="note">
